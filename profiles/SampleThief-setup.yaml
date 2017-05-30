@@ -16,11 +16,15 @@ training_manager_hunting_priority: true
 training_manager_priority_skills:
 - Small Edged
 - Light Thrown
+- Bow
+- Crossbow
+- Light Blunt
+- Heavy Thown
 - Skinning
 - Backstab
 - Tactics
 hunting_info:
-- :zone: rats
+- :zone: peccs
   stop_on:
   - Small Edged
   - Light Thrown
@@ -35,22 +39,27 @@ gear:
 #   :is_leather: true
 #   :hinders_lockpicking: false
 #   :is_worn: true
-- :adjective: rugged
-  :name: leathers
-  :is_leather: true
-  :hinders_lockpicking: false
+- :adjective: plate
+  :name: mask	
+  :is_leather: false
+  :hinders_lockpicking: true
   :is_worn: true
-- :adjective: rugged
-  :name: cowl
+- :adjective: coarse
+  :name: leathers
   :is_leather: true
   :hinders_lockpicking: true
   :is_worn: true
-- :adjective: rugged
+- :adjective: mail
   :name: gloves
   :is_leather: true
   :hinders_lockpicking: true
   :is_worn: true
-- :adjective: target
+- :adjective: scale 
+  :name: helm
+  :is_leather: false
+  :hinders_lockpicking: true
+  :is_worn: true
+- :adjective: small
   :name: shield
   :is_leather: false
   :hinders_lockpicking: true
@@ -70,18 +79,19 @@ gear:
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: true
-- :adjective: throwing
-  :name: spike
+- :adjective: polished
+  :name: sabre
   :is_leather: false
   :hinders_lockpicking: false
   :is_worn: false
   :swappable: true
 gear_sets:
   standard:
-  - rugged leathers
-  - rugged cowl
-  - rugged gloves
-  - target shield
+  - coarse leather
+  - scale helm
+  - mail gloves
+  - plate mask
+  - small shield
   - parry stick
   - brass knuckles
   - elbow spikes
@@ -98,13 +108,18 @@ training_abilities:
   Stealth: 60
 weapon_training:
   Brawling: ''
-  Small Edged: throwing spike
-  Small Blunt: throwing spike
-  Light Thrown: throwing spike
+  Small Edged: polished sabre
+  Small Blunt: komno
+  Light Thrown: bola
 kneel_khri: true
 buff_nonspells:
   khri:
   - Focus
+  - haste
+  - avoid
+  - dark
+  - damp
+
 skinning:
   skin: true
   arrange_all: false
@@ -129,6 +144,6 @@ crossing_training:
 - Athletics
 - Scholarship
 bin_stolen: true
-stealing_bag: pack
+stealing_bag: back
 favor_goal: 10
 favor_god: Meraud
